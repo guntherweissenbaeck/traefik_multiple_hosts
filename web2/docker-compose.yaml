@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web2:
+    # A container that exposes an API to show its IP address
+    image: traefik/whoami
+    labels:
+      - "traefik.http.routers.web2.rule=Host(`web2.localhost`)"
+    networks:
+      - traefik_proxy
+
+networks:
+  traefik_proxy:
+    external: true

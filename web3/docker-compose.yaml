@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web3:
+    # A container that exposes an API to show its IP address
+    image: nginx
+    volumes:
+      - ./app:/usr/share/nginx/html
+    labels:
+      - "traefik.http.routers.web3.rule=Host(`web3.localhost`)"
+    networks:
+      - traefik_proxy_web_3
+
+networks:
+  traefik_proxy_web_3:
+    external: true

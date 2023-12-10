@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "--------------------------------------"
+curl -H Host:web1.localhost http://127.0.0.1 
+echo "--------------------------------------"
+curl -H Host:web2.localhost http://127.0.0.1 
+echo "--------------------------------------"
+curl -H Host:web3.localhost http://127.0.0.1 
+echo \n
+echo "--------------------------------------"
+curl -H Host:web4.localhost http://127.0.0.1 
+echo \n
+echo "--------------------------------------"

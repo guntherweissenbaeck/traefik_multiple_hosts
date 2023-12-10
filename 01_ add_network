@@ -1,0 +1,4 @@
+#!/bin/bash
+docker network create traefik_proxy
+docker network create traefik_proxy_web_3
+docker network create traefik_proxy_web_4
